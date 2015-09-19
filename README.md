@@ -1,8 +1,7 @@
 Projet Master 2 (Java) : Contrôle Continu Système Complexe
 ===================
 
-###Algorithme de colonies fourmis au problème du
-voyageur de commerce:
+###Algorithme de colonies fourmis au problème du voyageur de commerce:
 
 ####Principe d’un algorithme de colonies fourmis au problème du voyageur de commerce: 
 
@@ -20,24 +19,24 @@ voyageur de commerce:
 
 - Dans notre programme la classe InputUser.java gérer les inputs de l’utilisateur. Cette classe composée par 4 fonctions : 
 
-• La fonction InputNombreVille() : récupère le nombre de sommets saisi par l’utilisateur. 
+	• La fonction InputNombreVille() : récupère le nombre de sommets saisi par l’utilisateur. 
 
-• La fonction InputNombreFourmis() : récupère le nombre de fourmis saisie par l’utilisateur. 
+	• La fonction InputNombreFourmis() : récupère le nombre de fourmis saisie par l’utilisateur. 
 
-• La fonction CreatMatriceDistance() : créer le matrice de distance entre les sommets, les valeurs de matrice définie aléatoirement entre la distance minimale et maximale qu’elles sont choisies par l’utilisateur. La dimension de matrice est le nombre de sommets n (n x n). 
+	• La fonction CreatMatriceDistance() : créer le matrice de distance entre les sommets, les valeurs de matrice définie aléatoirement entre la distance minimale et maximale qu’elles sont choisies par l’utilisateur. La dimension de matrice est le nombre de sommets n (n x n). 
 
-• La fonction CreatMatricePheromones() : créer le matrice de phéromones entre les sommets, les valeurs initiales de matrice choisie par l’utilisateur. 
+	• La fonction CreatMatricePheromones() : créer le matrice de phéromones entre les sommets, les valeurs initiales de matrice choisie par l’utilisateur. 
 
-• La fonction CreateListeVilleNonViste() : créer un vecteur contient les indices de sommets. 
+	• La fonction CreateListeVilleNonViste() : créer un vecteur contient les indices de sommets. 
 
 - La classe AlgoFourmisVoygComerc qui va contenir le gros du traitement de notre programme. Elle se charge de gérer les parcours de fourmis, de marquer les chemins avec des phéromones et chercher le chemin optimal. Elle est composée par 5 fonctions : 
 
-• La fonction CalculPheromone() : Pour passer d'une sommet (ville) à l'autre, une fourmi doit analyser les choix possibles. Le choix des villes suivantes en tenant compte de la connaissance collective est une simple roulette aléatoire. 
+	• La fonction CalculPheromone() : Pour passer d'une sommet (ville) à l'autre, une fourmi doit analyser les choix possibles. Le choix des villes suivantes en tenant compte de la connaissance collective est une simple roulette aléatoire. 
 
-• La fonction UpdatePheromone() : Une fois arrivée à destination, le parcours sauvegardé dans un vecteur dynamique donc on refait le chemin en sens inverse pour augmenter le taux de phéromones de ce parcours qui permet enrichir la connaissance collective de la colonie. 
+	• La fonction UpdatePheromone() : Une fois arrivée à destination, le parcours sauvegardé dans un vecteur dynamique donc on refait le chemin en sens inverse pour augmenter le taux de phéromones de ce parcours qui permet enrichir la connaissance collective de la colonie. 
 
-• La fonction VaporationPheromone() : Après certain temps, le taux de phéromones de chaque sommets baissé automatiquement à travers cette fonction. Elle parcourt tous les sommets et minimiser le taux de phéromones de chaque sommet. Tout naturellement, les chemins les plus courts vont se retrouver plus phéromonés que les autres. 
+	• La fonction VaporationPheromone() : Après certain temps, le taux de phéromones de chaque sommets baissé automatiquement à travers cette fonction. Elle parcourt tous les sommets et minimiser le taux de phéromones de chaque sommet. Tout naturellement, les chemins les plus courts vont se retrouver plus phéromonés que les autres. 
 
-• La fonction TraitementAlgoFourmis() : Elle se charge de donner à chaque fourmi une destination à suivre qu'elle soit en recherche ou en train de revenir, elle calcule la somme de distances entre les sommets. Afin de chaque parcours, elle sauvegarde la distance et les sommets de chemin. 
+	• La fonction TraitementAlgoFourmis() : Elle se charge de donner à chaque fourmi une destination à suivre qu'elle soit en recherche ou en train de revenir, elle calcule la somme de distances entre les sommets. Afin de chaque parcours, elle sauvegarde la distance et les sommets de chemin. 
 
-• La fonction TraitementAlgoFourmis() : Cette fonction permet d’itérer sur le nombre de fourmis et de refaire l’ensemble des traitements nécessaires et se charge de donner le chemin optimal et sa distance associée.
+	• La fonction TraitementAlgoFourmis() : Cette fonction permet d’itérer sur le nombre de fourmis et de refaire l’ensemble des traitements nécessaires et se charge de donner le chemin optimal et sa distance associée.
